@@ -4,6 +4,11 @@ defmodule FoodWeb.RestaurantController do
   alias Food.Restaurants
   alias Food.Restaurants.Restaurant
 
+  def index(conn, _params) do
+    restaurants = Restaurants.list_restaurants()
+    render(conn, "index.html", restaurants: restaurants)
+  end
+
   def new(conn, _params) do
     changeset = Restaurants.change_restaurant(%Restaurant{})
     render(conn, "new.html", changeset: changeset)

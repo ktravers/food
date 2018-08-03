@@ -1,0 +1,10 @@
+<h1>Restaurants!</h1>
+
+<table>
+  <%= for restaurant <- @restaurants do %>
+    <tr>
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.address %></td>
+    </tr>
+  <% end %>
+</table>
