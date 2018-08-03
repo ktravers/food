@@ -17,3 +17,5 @@
   </div>
   <%= submit "Create Restaurant" %>
 <% end %>
+
+<%= link "Cancel", to: Routes.restaurant_path(@conn, :index) %>
