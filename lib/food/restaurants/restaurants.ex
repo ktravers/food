@@ -1,18 +1,18 @@
 defmodule Food.Restaurants do
-  alias Food.Restaurants.Venue
+  alias Food.Restaurants.Restaurant
   alias Food.Repo
 
-  def list_venues do
-    Repo.all(Venue)
+  def list_restaurants do
+    Repo.all(Restaurant)
   end
 
-  def change_venue(%Venue{} = venue) do
-    Venue.changeset(venue, %{})
+  def change_restaurant(%Restaurant{} = restaurant) do
+    Restaurant.changeset(restaurant, %{})
   end
 
-  def create_venue(attrs \\ %{}) do
-    %Venue{}
-    |> Venue.changeset(attrs)
+  def create_restaurant(attrs \\ %{}) do
+    %Restaurant{}
+    |> Restaurant.changeset(attrs)
     |> Repo.insert()
   end
 end
